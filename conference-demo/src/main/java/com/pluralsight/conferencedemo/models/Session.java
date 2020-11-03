@@ -14,6 +14,7 @@ public class Session {
     // then you would add @ column annotation on each attribute and mapping it
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private Long session_id;
     private String session_name;
     private String session_description;
