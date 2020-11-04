@@ -27,8 +27,9 @@ public class Speaker {
     private byte[] speaker_photo;
 
     @ManyToMany(mappedBy = "speakers")
+    // JC : v1/speakers - sessions not showing up under speaker
     // fix-up cyclical payload serialization
-    //@JsonIgnore
+    @JsonIgnore
     private List<Session> sessions;
 
     public Speaker() {
