@@ -26,7 +26,7 @@ public class SessionsController {
 
     // get method that returns a specific session
     @GetMapping
-    @RequestMapping("{id")
+    @RequestMapping("{id}")
     public Session get(@PathVariable Long id) {
         return sessionRepository.getOne(id);
     }

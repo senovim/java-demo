@@ -9,7 +9,7 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity(name = "speakers")
-// @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Speaker {
 
     @Id
