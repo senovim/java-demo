@@ -1,11 +1,15 @@
 package com.pluralsight.conferencedemo.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 import java.util.List;
 
 // annotate as JPA entity
 // note: sessions is the name of the database table
 @Entity(name = "sessions")
+// prevent serialization error when GET sessions/2 in postman
+// @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Session {
     // name is the same as the database columns, JPA will bind to those columns, no need to annotate them
     // note Java uses camelcase?? do u mean sessionId
