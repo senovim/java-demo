@@ -13,6 +13,8 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>conference-demo</name>
 	<description>Demo project for Spring Boot</description>
+<!--	produces WAR instead of JAR file-->
+	<packaging>war</packaging>
 
 	<properties>
 		<java.version>11</java.version>
@@ -34,6 +36,13 @@
 <!--			<groupId>org.springframework.boot</groupId>-->
 <!--			<artifactId>spring-boot-starter-jetty</artifactId>-->
 <!--		</dependency>-->
+
+<!--		added for WAR files-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
